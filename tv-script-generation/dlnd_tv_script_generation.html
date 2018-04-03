@@ -11989,11 +11989,10 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <span class="sd">    :return: Tokenize dictionary where the key is the punctuation and the value is the token</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="n">symbols</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">,</span> <span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">])</span>
-    <span class="n">tokens</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s2">&quot;||Period||&quot;</span><span class="p">,</span> <span class="s2">&quot;||Comma||&quot;</span><span class="p">,</span> <span class="s2">&quot;||Quotation_Mark||&quot;</span><span class="p">,</span> <span class="s2">&quot;||Semicolon||&quot;</span><span class="p">,</span> \
-                 <span class="s2">&quot;||Exclamation_mark||&quot;</span><span class="p">,</span> <span class="s2">&quot;||Question_mark||&quot;</span><span class="p">,</span> <span class="s2">&quot;||Left_Parentheses||&quot;</span><span class="p">,</span> \
-                 <span class="s2">&quot;||Right_Parentheses||&quot;</span><span class="p">,</span> <span class="s2">&quot;||Dash||&quot;</span><span class="p">,</span> <span class="s2">&quot;||Return||&quot;</span><span class="p">])</span>
-    <span class="n">dict_tokens</span> <span class="o">=</span> <span class="p">{</span><span class="n">symbol</span><span class="p">:</span> <span class="n">token</span> <span class="k">for</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">token</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">symbols</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)}</span>
+    <span class="n">dict_tokens</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;.&#39;</span><span class="p">:</span> <span class="s2">&quot;||Period||&quot;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">:</span> <span class="s2">&quot;||Comma||&quot;</span><span class="p">,</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">:</span> <span class="s2">&quot;||Quotation_Mark||&quot;</span><span class="p">,</span> 
+                   <span class="s1">&#39;;&#39;</span><span class="p">:</span>  <span class="s2">&quot;||Semicolon||&quot;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">:</span> <span class="s2">&quot;||Exclamation_mark||&quot;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">:</span> <span class="s2">&quot;||Question_mark||&quot;</span><span class="p">,</span> 
+                   <span class="s1">&#39;(&#39;</span><span class="p">:</span> <span class="s2">&quot;||Left_Parentheses||&quot;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">:</span> <span class="s2">&quot;||Right_Parentheses||&quot;</span><span class="p">,</span> 
+                   <span class="s1">&#39;--&#39;</span><span class="p">:</span> <span class="s2">&quot;||Dash||&quot;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span> <span class="s2">&quot;||Return||&quot;</span><span class="p">}</span>
     <span class="k">return</span> <span class="n">dict_tokens</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -12582,19 +12581,19 @@ Default GPU Device: /device:GPU:0
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">70</span>
 <span class="c1"># Batch Size</span>
-<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">130</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">150</span>
 <span class="c1"># RNN Size</span>
 <span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">512</span>
 <span class="c1"># Embedding Dimension Size</span>
 <span class="n">embed_dim</span> <span class="o">=</span> <span class="mi">300</span>
 <span class="c1"># Sequence Length</span>
-<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="c1"># Learning Rate</span>
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.005</span>
 <span class="c1"># Show stats for every n number of batches</span>
-<span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">115</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -12718,14 +12717,20 @@ Default GPU Device: /device:GPU:0
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch    0/16   train_loss = 8.819
-Epoch   6 Batch    4/16   train_loss = 3.540
-Epoch  12 Batch    8/16   train_loss = 2.372
-Epoch  18 Batch   12/16   train_loss = 1.784
-Epoch  25 Batch    0/16   train_loss = 1.401
-Epoch  31 Batch    4/16   train_loss = 1.029
-Epoch  37 Batch    8/16   train_loss = 0.852
-Epoch  43 Batch   12/16   train_loss = 0.790
+<pre>Epoch   0 Batch    0/23   train_loss = 8.822
+Epoch   5 Batch    0/23   train_loss = 4.013
+Epoch  10 Batch    0/23   train_loss = 2.965
+Epoch  15 Batch    0/23   train_loss = 2.255
+Epoch  20 Batch    0/23   train_loss = 1.782
+Epoch  25 Batch    0/23   train_loss = 1.514
+Epoch  30 Batch    0/23   train_loss = 1.252
+Epoch  35 Batch    0/23   train_loss = 1.004
+Epoch  40 Batch    0/23   train_loss = 0.866
+Epoch  45 Batch    0/23   train_loss = 0.729
+Epoch  50 Batch    0/23   train_loss = 0.655
+Epoch  55 Batch    0/23   train_loss = 0.599
+Epoch  60 Batch    0/23   train_loss = 0.597
+Epoch  65 Batch    0/23   train_loss = 0.528
 Model Trained and Saved
 </pre>
 </div>
@@ -12880,8 +12885,8 @@ Model Trained and Saved
 <span class="sd">    :return: String of the predicted word</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)</span>
-    <span class="n">pred_word</span> <span class="o">=</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">probabilities</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">probabilities</span><span class="p">)</span>
+    <span class="n">pred_word</span> <span class="o">=</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">ind</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
     <span class="k">return</span> <span class="n">pred_word</span>
 
 
@@ -12986,18 +12991,24 @@ Model Trained and Saved
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from ./save
-moe_szyslak:(eyeing homer&#39;s ass) oh yeah, that&#39;s me. i&#39;ve got a bottomless mug of new&#34; duff extra cold&#34; for... i&#39;ve got their names written down there you ain&#39;t no one else.
-carl_carlson: a little dessert, then you jack bauer &#39;em!
-smokin&#39;_joe_frazier: does your money this time, homer? it&#39;s probably a combination of things.
-moe_szyslak:(friendly) so, why don&#39;t we fill your pity booze, that&#39;s made some other club at the perfect alibi, my daughter can beat up my friend.
-homer_simpson: i think that&#39;s the best thing.
-homer_simpson: and ask yourselves, people, who&#39;s to be big changes.
-moe_szyslak: whoa, whoa, whoa. you said don&#39;t pull!
-moe_szyslak: homer, why don&#39;t you tell him from me by vacuum cleaner. the wrong thing.
-homer_simpson: and you came in the mail.
-homer_simpson:(gasps) gr-aargh! oh yeah, what&#39;s the matter, homer? bloodiest?
-lisa_simpson: dad, you know the chinese were?
-moe_szyslak: uh, yeah.
+moe_szyslak: okay that says over the times, moe?
+
+
+teenage_bart: uh, let me check no as moe with this baby maybe&#34; kid and my favorite ticket.(belches)
+kent_brockman: with enough dad with your old face gets the back to my duff.
+moe_szyslak:(yelp of pain) ahh.(into phone) aw hey, then first time ever saw what enemies! that&#39;s right.
+homer_simpson: quick, moe--
+homer_simpson: you guys mind if i want you to feel special?
+moe_szyslak: no.(sighs) i must be very difficult.
+barney_gumble:(good natured) for ya, ain&#39;t never gonna be in the circus.
+moe_szyslak: one, huh?
+barney_gumble: you know, i rather like this pub.
+moe_szyslak:(upset) hey, hey, hey, hey! that plank&#39;s only for comin&#39; in!
+homer_simpson:(pissed) hey, thanks big girl! a text plus
+
+
+barney_gumble: hey homer, you so much barney_gumble: we&#39;ll you gonna be back?
+bart_simpson:(realizing)
 </pre>
 </div>
 </div>
